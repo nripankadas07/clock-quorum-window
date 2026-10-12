@@ -4,8 +4,54 @@
   "tested": "Linux Python 3.12.14",
   "unit_tests": 14,
   "install_passed": true,
-  "remote_ci": "NOT_RUN",
-  "publication": "Website publication in progress; remote CI not yet verified",
+  "remote_ci": {
+    "source_head": "5c19134d2ba922503924b3d8de4292328ce47281",
+    "runtimes": [
+      "3.10",
+      "3.12",
+      "3.14"
+    ],
+    "platform": "ubuntu-latest",
+    "checks": [
+      {
+        "name": "verify (3.14)",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/nripankadas07/clock-quorum-window/actions/runs/38221518045/job/114718648310"
+      },
+      {
+        "name": "verify (3.10)",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/nripankadas07/clock-quorum-window/actions/runs/38221518045/job/114718648305"
+      },
+      {
+        "name": "verify (3.12)",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/nripankadas07/clock-quorum-window/actions/runs/38221518045/job/114718648155"
+      },
+      {
+        "name": "verify (3.12)",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/nripankadas07/clock-quorum-window/actions/runs/38221409289/job/114718294071"
+      },
+      {
+        "name": "verify (3.10)",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/nripankadas07/clock-quorum-window/actions/runs/38221409289/job/114718294043"
+      },
+      {
+        "name": "verify (3.14)",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/nripankadas07/clock-quorum-window/actions/runs/38221409289/job/114718293824"
+      }
+    ]
+  },
+  "publication": "Public alpha; exact reviewed source head verified by remote CI",
   "commands": [
     {
       "command": [
@@ -101,5 +147,6 @@
   "wheel": {
     "name": "clock_quorum_window-0.1.0-py3-none-any.whl",
     "sha256": "792fff8416f8fe5f682985dc1d7b946b2ab8d24a5538a9b8edc3a1c06fd1a142"
-  }
+  },
+  "canonical_live_receipts": "https://github.com/nripankadas07/nripankadas07/blob/main/docs/PROJECT_INDEX.md"
 }
