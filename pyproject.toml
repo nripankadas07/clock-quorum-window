@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "clock-quorum-window"
+version = "0.1.0"
+description = "Offline normalized-input diagnostic with explicit limitations"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+dependencies = []
+[project.scripts]
+clock-quorum-window = "clock_quorum_window.cli:main"
+[tool.setuptools]
+packages = ["clock_quorum_window"]

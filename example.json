@@ -1,0 +1,20 @@
+{
+  "sources": [
+    {
+      "id": "a",
+      "lower": 0,
+      "upper": 10
+    },
+    {
+      "id": "b",
+      "lower": 2,
+      "upper": 4
+    },
+    {
+      "id": "c",
+      "lower": 6,
+      "upper": 8
+    }
+  ],
+  "quorum": 2
+}

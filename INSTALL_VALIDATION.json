@@ -1,0 +1,105 @@
+{
+  "name": "clock-quorum-window",
+  "state": "VALIDATED",
+  "tested": "Linux Python 3.12.14",
+  "unit_tests": 14,
+  "install_passed": true,
+  "remote_ci": "NOT_RUN",
+  "publication": "Website publication in progress; remote CI not yet verified",
+  "commands": [
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-m",
+        "compileall",
+        "-q",
+        "/workspace/scratch/5d784ffbbfd3/prepared-oct12/clock-quorum-window"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-m",
+        "pip",
+        "wheel",
+        "--no-index",
+        "--no-deps",
+        "--no-build-isolation",
+        "--wheel-dir",
+        "/workspace/scratch/5d784ffbbfd3/prepared-oct12/clock-quorum-window/wheelhouse",
+        "/workspace/scratch/5d784ffbbfd3/prepared-oct12/clock-quorum-window"
+      ],
+      "exit": 0,
+      "stdout": "Processing /workspace/scratch/5d784ffbbfd3/prepared-oct12/clock-quorum-window\n  Preparing metadata (pyproject.toml): started\n  Preparing metadata (pyproject.toml): finished with status 'done'\nBuilding wheels for collected packages: clock-quorum-window\n  Building wheel for clock-quorum-window (pyproject.toml): started\n  Building wheel for clock-quorum-window (pyproject.toml): finished with status 'done'\n  Created wheel for clock-quorum-window: filename=clock_quorum_window-0.1.0-py3-none-any.whl size=3974 sha256=792fff8416f8fe5f682985dc1d7b946b2ab8d24a5538a9b8edc3a1c06fd1a142\n  Stored in directory: /tmp/pip-ephem-wheel-cache-q04n1_8m/wheels/16/e1/0f/da8a4f8c4d6042c1e390e2a9fc8282032acb69434ebe838f81\nSuccessfully built clock-quorum-window\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-m",
+        "venv",
+        "/tmp/candidate-install-red4840y/venv"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/tmp/candidate-install-red4840y/venv/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "--no-index",
+        "--no-deps",
+        "/workspace/scratch/5d784ffbbfd3/prepared-oct12/clock-quorum-window/wheelhouse/clock_quorum_window-0.1.0-py3-none-any.whl"
+      ],
+      "exit": 0,
+      "stdout": "Processing /workspace/scratch/5d784ffbbfd3/prepared-oct12/clock-quorum-window/wheelhouse/clock_quorum_window-0.1.0-py3-none-any.whl\nInstalling collected packages: clock-quorum-window\nSuccessfully installed clock-quorum-window-0.1.0\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/tmp/candidate-install-red4840y/venv/bin/clock-quorum-window",
+        "/workspace/scratch/5d784ffbbfd3/prepared-oct12/clock-quorum-window/example.json"
+      ],
+      "exit": 0,
+      "stdout": "{\"ambiguous\": true, \"quorum\": 2, \"trace\": [{\"kind\": \"point\", \"lower\": 0, \"sources\": [\"a\"], \"upper\": 0}, {\"kind\": \"open_interval\", \"lower\": 0, \"sources\": [\"a\"], \"upper\": 2}, {\"kind\": \"point\", \"lower\": 2, \"sources\": [\"a\", \"b\"], \"upper\": 2}, {\"kind\": \"open_interval\", \"lower\": 2, \"sources\": [\"a\", \"b\"], \"upper\": 4}, {\"kind\": \"point\", \"lower\": 4, \"sources\": [\"a\", \"b\"], \"upper\": 4}, {\"kind\": \"open_interval\", \"lower\": 4, \"sources\": [\"a\"], \"upper\": 6}, {\"kind\": \"point\", \"lower\": 6, \"sources\": [\"a\", \"c\"], \"upper\": 6}, {\"kind\": \"open_interval\", \"lower\": 6, \"sources\": [\"a\", \"c\"], \"upper\": 8}, {\"kind\": \"point\", \"lower\": 8, \"sources\": [\"a\", \"c\"], \"upper\": 8}, {\"kind\": \"open_interval\", \"lower\": 8, \"sources\": [\"a\"], \"upper\": 10}, {\"kind\": \"point\", \"lower\": 10, \"sources\": [\"a\"], \"upper\": 10}], \"windows\": [[2, 4], [6, 8]]}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/tmp/candidate-install-red4840y/venv/bin/clock-quorum-window",
+        "/tmp/candidate-install-red4840y/bad.json"
+      ],
+      "exit": 2,
+      "stdout": "",
+      "stderr": "input error: 1..128 sources and valid quorum required\n"
+    },
+    {
+      "command": [
+        "/tmp/candidate-install-red4840y/venv/bin/clock-quorum-window",
+        "/tmp/candidate-install-red4840y/missing.json"
+      ],
+      "exit": 2,
+      "stdout": "",
+      "stderr": "input error: [Errno 2] No such file or directory: '/tmp/candidate-install-red4840y/missing.json'\n"
+    },
+    {
+      "command": [
+        "/tmp/candidate-install-red4840y/venv/bin/clock-quorum-window",
+        "/tmp/candidate-install-red4840y/large.json"
+      ],
+      "exit": 2,
+      "stdout": "",
+      "stderr": "input error: input exceeds 1 MiB\n"
+    }
+  ],
+  "wheel": {
+    "name": "clock_quorum_window-0.1.0-py3-none-any.whl",
+    "sha256": "792fff8416f8fe5f682985dc1d7b946b2ab8d24a5538a9b8edc3a1c06fd1a142"
+  }
+}

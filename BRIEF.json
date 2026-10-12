@@ -1,0 +1,23 @@
+{
+  "name": "clock-quorum-window",
+  "state": "VALIDATED",
+  "user": "Reliability engineer comparing captured clock-offset uncertainty estimates.",
+  "pain": "Find every closed offset interval supported by a required count and expose disjoint or point-only agreement.",
+  "smallest_capability": "Exact integer interval sweep for k-coverage with separate point/interior support counts and merged quorum windows.",
+  "acceptance": [
+    "Closed shared endpoints count, including zero-width intervals.",
+    "Return every disjoint component deterministically.",
+    "Unique source IDs, bounded count, valid intervals and quorum are mandatory."
+  ],
+  "demand": "Inferred from clock synchronization workflows; adjacent NTP/Roughtime/Time-Card tools are broader alternatives.",
+  "discovery": "Clock uncertainty and quorum examples.",
+  "distinctness": "DNS quorum compares serial equality; this tool solves geometric uncertainty overlap.",
+  "limits": "Not NTP/PTP implementation, authenticated time, clock correction or proof that independent sources are trustworthy.",
+  "local_validation": {
+    "unit_tests": 14,
+    "wheel_and_clean_install": "PASS",
+    "Python": "Linux 3.12.14",
+    "remote_ci": "NOT_RUN"
+  },
+  "publication": "Website publication in progress; remote CI not yet verified"
+}
